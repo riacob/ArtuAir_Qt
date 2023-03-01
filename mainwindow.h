@@ -5,6 +5,7 @@
 #include <QDir>
 
 #include "serialtransreceiver.h"
+#include "graphicreadouts.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -20,7 +21,6 @@ public:
     SerialTransreceiver serial;
 
 private slots:
-    void on_rtc_settime_btn_clicked();
 
     void on_status_forceupdate_btn_clicked();
 
@@ -31,9 +31,23 @@ private slots:
 
     void on_status_clearlog_btn_clicked();
 
+    void on_cfg_settime_btn_clicked();
+
+    void on_admin_btn_clicked();
+
+    void on_cfg_setlocaltime_btn_clicked();
+
+    void on_cfg_logout_btn_clicked();
+
+    void on_cfg_always_check_stateChanged(int arg1);
+
+    void on_status_graphics_btn_clicked();
+
 private:
     Ui::MainWindow *ui;
     void status_update();
     QString logFilePath;
+    bool password[8];
+    GraphicReadouts *graphicReadouts;
 };
 #endif // MAINWINDOW_H

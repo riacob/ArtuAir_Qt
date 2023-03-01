@@ -199,10 +199,10 @@
     <widget class="QGroupBox" name="groupBox_2">
      <property name="geometry">
       <rect>
-       <x>160</x>
-       <y>40</y>
+       <x>150</x>
+       <y>20</y>
        <width>271</width>
-       <height>121</height>
+       <height>171</height>
       </rect>
      </property>
      <property name="title">
@@ -277,10 +277,10 @@
     <widget class="QGroupBox" name="groupBox_3">
      <property name="geometry">
       <rect>
-       <x>510</x>
-       <y>30</y>
-       <width>611</width>
-       <height>80</height>
+       <x>440</x>
+       <y>19</y>
+       <width>511</width>
+       <height>71</height>
       </rect>
      </property>
      <property name="title">
@@ -305,7 +305,7 @@
         <x>210</x>
         <y>30</y>
         <width>83</width>
-        <height>29</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="text">
@@ -328,10 +328,10 @@
      <widget class="QPushButton" name="cfg_readtime_btn">
       <property name="geometry">
        <rect>
-        <x>440</x>
+        <x>420</x>
         <y>30</y>
         <width>83</width>
-        <height>29</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="text">
@@ -343,8 +343,8 @@
    <widget class="QLabel" name="connection_label">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>720</y>
+      <x>50</x>
+      <y>680</y>
       <width>521</width>
       <height>20</height>
      </rect>
@@ -369,9 +369,9 @@
      <property name="geometry">
       <rect>
        <x>250</x>
-       <y>50</y>
+       <y>30</y>
        <width>131</width>
-       <height>131</height>
+       <height>231</height>
       </rect>
      </property>
      <property name="title">
@@ -423,10 +423,10 @@
     <widget class="QGroupBox" name="pressunits_groupbox">
      <property name="geometry">
       <rect>
-       <x>410</x>
-       <y>40</y>
+       <x>400</x>
+       <y>30</y>
        <width>191</width>
-       <height>181</height>
+       <height>231</height>
       </rect>
      </property>
      <property name="title">
@@ -611,10 +611,10 @@
     <widget class="QGroupBox" name="groupBox_5">
      <property name="geometry">
       <rect>
-       <x>730</x>
-       <y>40</y>
-       <width>301</width>
-       <height>141</height>
+       <x>690</x>
+       <y>30</y>
+       <width>401</width>
+       <height>131</height>
       </rect>
      </property>
      <property name="title">
@@ -649,8 +649,8 @@
      <widget class="QPushButton" name="status_openfile_btn">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>80</y>
+        <x>110</x>
+        <y>70</y>
         <width>83</width>
         <height>29</height>
        </rect>
@@ -662,8 +662,8 @@
      <widget class="QPushButton" name="status_clearlog_btn">
       <property name="geometry">
        <rect>
-        <x>170</x>
-        <y>80</y>
+        <x>200</x>
+        <y>70</y>
         <width>83</width>
         <height>29</height>
        </rect>
@@ -677,9 +677,9 @@
      <property name="geometry">
       <rect>
        <x>690</x>
-       <y>200</y>
-       <width>381</width>
-       <height>101</height>
+       <y>170</y>
+       <width>401</width>
+       <height>131</height>
       </rect>
      </property>
      <property name="title">
@@ -688,9 +688,9 @@
      <widget class="QCheckBox" name="status_automaticupdates_check">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>20</y>
-        <width>211</width>
+        <x>80</x>
+        <y>30</y>
+        <width>161</width>
         <height>26</height>
        </rect>
       </property>
@@ -701,8 +701,8 @@
      <widget class="QSpinBox" name="status_seconds_spinbox">
       <property name="geometry">
        <rect>
-        <x>210</x>
-        <y>20</y>
+        <x>250</x>
+        <y>30</y>
         <width>48</width>
         <height>29</height>
        </rect>
@@ -723,7 +723,7 @@
      <widget class="QLabel" name="status_seconds_label">
       <property name="geometry">
        <rect>
-        <x>270</x>
+        <x>310</x>
         <y>30</y>
         <width>63</width>
         <height>20</height>
@@ -736,8 +736,8 @@
      <widget class="QPushButton" name="status_forceupdate_btn">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>50</y>
+        <x>120</x>
+        <y>60</y>
         <width>131</width>
         <height>29</height>
        </rect>
@@ -749,8 +749,8 @@
      <widget class="QPushButton" name="status_clear">
       <property name="geometry">
        <rect>
-        <x>180</x>
-        <y>50</y>
+        <x>260</x>
+        <y>60</y>
         <width>101</width>
         <height>29</height>
        </rect>
@@ -759,22 +759,6 @@
        <string>Clear Readouts</string>
       </property>
      </widget>
-    </widget>
-    <widget class="QPushButton" name="status_graphics_btn">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>990</x>
-       <y>310</y>
-       <width>101</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Graphics View...</string>
-     </property>
     </widget>
    </widget>
    <widget class="QPushButton" name="admin_btn">
@@ -788,6 +772,22 @@
     </property>
     <property name="text">
      <string>Admin Login...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="status_graphics_btn">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>680</y>
+      <width>101</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Graphics View...</string>
     </property>
    </widget>
   </widget>

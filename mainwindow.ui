@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1201</width>
+    <height>709</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ArtuAir</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="rtc_groupbox">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>40</y>
+      <width>1131</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>RTC Configuration</string>
+    </property>
+    <widget class="QDateTimeEdit" name="rtc_datetimeedit">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>50</y>
+       <width>194</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="displayFormat">
+      <string>dd/MM/yyyy HH:mm:ss</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="rtc_settime_btn">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>50</y>
+       <width>83</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Set Time</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="rtc_readtime_btn">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>50</y>
+       <width>83</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Read Time</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="bme680_groupbox">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>170</y>
+      <width>1131</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>BME680 Configuration</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="connection_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>620</y>
+      <width>521</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Disconnected</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="status_groupbox">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>310</y>
+      <width>1131</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Device Status</string>
+    </property>
+    <widget class="QCheckBox" name="status_automaticupdates_check">
+     <property name="geometry">
+      <rect>
+       <x>770</x>
+       <y>200</y>
+       <width>211</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Update Automatically every</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="status_forceupdate_btn">
+     <property name="geometry">
+      <rect>
+       <x>820</x>
+       <y>240</y>
+       <width>131</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Force Update</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="status_seconds_spinbox">
+     <property name="geometry">
+      <rect>
+       <x>990</x>
+       <y>200</y>
+       <width>48</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>30</number>
+     </property>
+     <property name="maximum">
+      <number>3600</number>
+     </property>
+     <property name="singleStep">
+      <number>15</number>
+     </property>
+     <property name="value">
+      <number>30</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="status_seconds_label">
+     <property name="geometry">
+      <rect>
+       <x>1040</x>
+       <y>200</y>
+       <width>63</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>seconds</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="status_humidity_label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>80</y>
+       <width>211</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Relative Humidity:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="status_temperature_label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>211</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Temperature:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="status_pressure_label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>211</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Pressure:</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="tempunits_groupbox">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>60</y>
+       <width>131</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Temperature Units</string>
+     </property>
+     <widget class="QRadioButton" name="status_celsius_radio">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>112</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Celsius</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="status_fahrenheit_radio">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>112</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Fahrenheit</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="status_kelvin_radio">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>112</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Kelvin</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="pressunits_groupbox">
+     <property name="geometry">
+      <rect>
+       <x>530</x>
+       <y>40</y>
+       <width>191</width>
+       <height>181</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Pressure Units</string>
+     </property>
+     <widget class="QRadioButton" name="status_pascal_radio">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>112</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pascal</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="status_psi_radio">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>112</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PSI</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="status_bar_radio">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>112</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>BAR</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="status_torr_radio">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>120</y>
+        <width>112</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Torr</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="status_atm_radio">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>150</y>
+        <width>112</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ATM</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="status_aqi_label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>100</y>
+       <width>141</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Air Quality Index:</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="status_aqi_bg_btn">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>260</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:transparent;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="status_clear">
+     <property name="geometry">
+      <rect>
+       <x>980</x>
+       <y>240</y>
+       <width>83</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Clear</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="status_log_check">
+     <property name="geometry">
+      <rect>
+       <x>760</x>
+       <y>50</y>
+       <width>141</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Log to file</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="status_setpath_btn">
+     <property name="geometry">
+      <rect>
+       <x>760</x>
+       <y>80</y>
+       <width>121</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Set File Path...</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="status_openfile_btn">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>50</y>
+       <width>83</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Open File</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="status_clearlog_btn">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>90</y>
+       <width>83</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Clear Log</string>
+     </property>
+    </widget>
+    <zorder>status_aqi_bg_btn</zorder>
+    <zorder>status_automaticupdates_check</zorder>
+    <zorder>status_forceupdate_btn</zorder>
+    <zorder>status_seconds_spinbox</zorder>
+    <zorder>status_seconds_label</zorder>
+    <zorder>status_humidity_label</zorder>
+    <zorder>status_temperature_label</zorder>
+    <zorder>status_pressure_label</zorder>
+    <zorder>tempunits_groupbox</zorder>
+    <zorder>pressunits_groupbox</zorder>
+    <zorder>status_aqi_label</zorder>
+    <zorder>status_clear</zorder>
+    <zorder>status_log_check</zorder>
+    <zorder>status_setpath_btn</zorder>
+    <zorder>status_openfile_btn</zorder>
+    <zorder>status_clearlog_btn</zorder>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1201</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuConfig">
+    <property name="title">
+     <string>Connection</string>
+    </property>
+    <addaction name="actionSerial_Port"/>
+    <addaction name="actionConnect"/>
+    <addaction name="actionDisconnect"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionSettings"/>
+   </widget>
+   <addaction name="menuConfig"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSerial">
+   <property name="text">
+    <string>Serial...</string>
+   </property>
+  </action>
+  <action name="actionSerial_Port">
+   <property name="text">
+    <string>Serial Port...</string>
+   </property>
+  </action>
+  <action name="actionConnect">
+   <property name="text">
+    <string>Connect</string>
+   </property>
+  </action>
+  <action name="actionDisconnect">
+   <property name="text">
+    <string>Disconnect</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Settings...</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

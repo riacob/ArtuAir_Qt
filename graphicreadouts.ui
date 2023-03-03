@@ -26,6 +26,20 @@
     <string>WORK IN PROGRESS</string>
    </property>
   </widget>
+  <widget class="QLCDNumber" name="aqi_lcd">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>190</y>
+     <width>231</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 0, 0);
+color:rgb(0,0,0);</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

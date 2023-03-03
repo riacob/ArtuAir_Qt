@@ -776,7 +776,7 @@
    </widget>
    <widget class="QPushButton" name="status_graphics_btn">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -797,7 +797,7 @@
      <x>0</x>
      <y>0</y>
      <width>1215</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuConfig">

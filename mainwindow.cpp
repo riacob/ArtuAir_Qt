@@ -18,12 +18,10 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     logFilePath = "log.csv";
-    graphicReadouts = new GraphicReadouts();
 }
 
 MainWindow::~MainWindow()
 {
-    delete graphicReadouts;
     delete ui;
 }
 
@@ -44,17 +42,13 @@ void MainWindow::status_update()
     // Split the received string into useful data
     QStringList serialdat = serialstr.split(",");
     // Pressure in Pascal
-    float pressure = serialdat.at(2).toFloat();
-    graphicReadouts->pressure = pressure;
+    pressure = serialdat.at(2).toFloat();
     // Temperature in Celsius
-    float temperature = serialdat.at(3).toFloat();
-    graphicReadouts->temperature = temperature;
+    temperature = serialdat.at(3).toFloat();
     // Humidity (relative)
-    float humidity = serialdat.at(4).toFloat();
-    graphicReadouts->humidity = humidity;
+    humidity = serialdat.at(4).toFloat();
     // Air Quality Index
-    int aqi = serialdat.at(5).toInt();
-    graphicReadouts->aqi = aqi;
+    aqi = serialdat.at(5).toInt();
 
     // Data logging (before any conversion)
     if (ui->status_log_check->isChecked()) {
@@ -116,12 +110,14 @@ void MainWindow::status_update()
     aqistr.append(QString::number(aqi));
 
     // Air quality index formatting
+    /*
     if (aqi>0) {ui->status_aqi_bg_btn->setStyleSheet("background-color:rgb(0,255,0); color:rgb(0,0,0)");ui->status_aqi_bg_btn->setText("AQI: Good");}
     if (aqi>50) {ui->status_aqi_bg_btn->setStyleSheet("background-color:rgb(255,255,0); color:rgb(0,0,0)");ui->status_aqi_bg_btn->setText("AQI: Average");}
     if (aqi>100) {ui->status_aqi_bg_btn->setStyleSheet("background-color:rgb(255,165,0); color:rgb(0,0,0)");ui->status_aqi_bg_btn->setText("AQI: Little Bad");}
     if (aqi>150) {ui->status_aqi_bg_btn->setStyleSheet("background-color:rgb(255,0,0); color:rgb(0,0,0)");ui->status_aqi_bg_btn->setText("AQI: Bad");}
     if (aqi>200) {ui->status_aqi_bg_btn->setStyleSheet("background-color:rgb(255,0,255); color:rgb(255,255,255)");ui->status_aqi_bg_btn->setText("AQI: Worse");}
     if (aqi>300) {ui->status_aqi_bg_btn->setStyleSheet("background-color:rgb(0,0,0); color:rgb(255,255,255)");ui->status_aqi_bg_btn->setText("AQI: Very Bad");}
+    */
 
     // Date and time formatting
     datestr.append(serialdat.at(0));
@@ -235,7 +231,9 @@ void MainWindow::on_cfg_always_check_stateChanged(int arg1)
 // DONE
 void MainWindow::on_status_graphics_btn_clicked()
 {
+    GraphicReadouts *gr = new GraphicReadouts(temperature, pressure, humidity, aqi);
     // Open the graphics view
-    graphicReadouts->exec();
+    gr->exec();
+    delete gr;
 }
 

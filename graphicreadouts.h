@@ -12,15 +12,15 @@ class GraphicReadouts : public QDialog
     Q_OBJECT
 
 public:
-    explicit GraphicReadouts(QWidget *parent = nullptr);
+    explicit GraphicReadouts(float temp, float press, float hum, int aqi, QWidget *parent = nullptr);
     ~GraphicReadouts();
-    float temperature;
-    float pressure;
-    float humidity;
-    int aqi;
 
 private:
     Ui::GraphicReadouts *ui;
+    float temperature;
+    float pressure;
+    float humidity;
+    int _aqi;
 };
 
 #endif // GRAPHICREADOUTS_H

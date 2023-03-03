@@ -48,6 +48,9 @@ private:
     void status_update();
     QString logFilePath;
     bool password[8];
-    GraphicReadouts *graphicReadouts;
+    float temperature;
+    float pressure;
+    float humidity;
+    int aqi;
 };
 #endif // MAINWINDOW_H
